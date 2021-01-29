@@ -50,8 +50,11 @@ Expect (pizza.addToppings()).toEqual(pizza {price: 19, size: "small", toppings: 
 
 Describe: Order()
 Test: Store a pizza ordered created by user.
-Expect (let order = new Order{pizzas:{}})
+Expect (let order = new Order()).toEqual(order{pizzas:{}})
 
+Describe: Order.prototype.addToOrder()
+Test: Add pizza to order object.
+Expect: (order.addToOrder(pizza)).toEqual(order{pizzas:{14}})
 ```
 ---
 
