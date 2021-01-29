@@ -34,8 +34,11 @@ $(document).ready(function() {
     const pizzaSize = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=topping]:checked").each(function(){
       const pizzaToppings = parseInt($(this).val());
+      console.log(pizzaToppings);
+    });  
+    
     console.log(pizzaSize);
-    console.log(pizzaToppings);
-    });
+    
+    
   });
 });
