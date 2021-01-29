@@ -1,0 +1,14 @@
+body {
+
+}
+
+.container {
+  position: absolute;
+  height: 80%; 
+  width: 80%; 
+  top: 10%; 
+  left: 10%; 
+  background-color: yellow;
+  border-radius: 10%;
+  border: solid blue;
+}

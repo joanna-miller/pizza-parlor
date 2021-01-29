@@ -23,12 +23,6 @@ _Build a custom pizza from the size and topping choices provided and get the pri
 * _Open index.html in your browser_
 ---
 
-## Known Bugs
-
-* _Any known issues_
-* _should go here_
----
-
 ## Specifications
 ```
 Describe: Pizza()
