@@ -34,10 +34,12 @@ _Build a custom pizza from the size and topping choices provided and get the pri
 Describe: Pizza()
 Test: Pizza Constructor should have price, size, and toppings keys.
 Expect: (let pizza = new Pizza()).toEqual(pizza{price:, size:, toppings:})
+Test: Pizza Constructor should hold values for each key.
+Expect: (let pizza = new Pizza(10, "large", [2, 2])).toEqual(pizza{price: 10, size: large, toppings: [2, 2]})
 
 Describe: Pizza.prototype.priceCalc()
-Test:
-Expect:
+Test: Calculate pizza cost based on size and amount of toppings chosen.
+Expect: (pizza.priceCalc())
 ```
 ---
 
