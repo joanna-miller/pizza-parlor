@@ -1,3 +1,5 @@
+// Business Logic for Pizza ---------
+
 function Pizza(price, size, toppings) {
   this.price = price;
   this.size = size;
@@ -23,3 +25,17 @@ Pizza.prototype.addToppings = function () {
   });
   this.price += sum;
 }
+
+//User Interface Logic ---------
+
+$(document).ready(function() {
+  $("form#pizza-builder").submit(function(event) {
+    event.preventDefault();
+    const pizzaSize = $("input:radio[name=size]:checked").val();
+    $("input:checkbox[name=topping]:checked").each(function(){
+      const pizzaToppings = parseInt($(this).val());
+    console.log(pizzaSize);
+    console.log(pizzaToppings);
+    });
+  });
+});
