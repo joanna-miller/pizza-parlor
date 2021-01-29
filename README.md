@@ -51,6 +51,9 @@ Describe: Pizza.prototype.addToppings()
 Test: Calculate pizza cost based on 1 added topping.
 Expect: (pizza.addToppings()).toEqual(pizza {price: 14, size: "small", toppings: [2]})
 
+Test: Calculate pizza cost based on multiple added toppings.
+Expect (pizza.addToppings()).toEqual(pizza {price: 19, size: "small", toppings: [2, 2, 3]})
+
 ```
 ---
 
