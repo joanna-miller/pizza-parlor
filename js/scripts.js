@@ -60,17 +60,18 @@ Pizza.prototype.addToppings = function () {
 //User Interface Logic ---------
 let order = new Order();
 
-/* function displayPizzaDetails(orderToDisplay) {
+function displayPizzaDetails(orderToDisplay) {
   let pizzaList = $("ul#cart");
   let htmlForPizzaInfo = "";
   Object.keys(orderToDisplay).forEach(function(key) {
     const pizza = orderToDisplay.findPizza(key);
-    htmlForPizzaInfo += "<li id=" + pizza.id + ">" + "Pizza #" + pizza.id + ": " + pizza.size + "#" + "toppings - $" + pizza.price + "</li>"
+    htmlForPizzaInfo += "<li> id=" + pizza.id + ">" + pizza.size + "</li>"
   });
   pizzaList.html(htmlForPizzaInfo);
-}; */
+}; 
 
 $(document).ready(function() {
+  let newPizza = new Pizza(0, "",[]);
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
     const pizzaToppings = [];
@@ -78,11 +79,18 @@ $(document).ready(function() {
     $("input:checkbox[name=topping]:checked").each(function(){
       pizzaToppings.push(parseInt($(this).val()));
     }); 
-    let pizza = new Pizza(0, pizzaSize, pizzaToppings);
-    pizza.priceCalc();
-    pizza.addToppings();
-    $("#pizza-price").text(pizza.price);
+    newPizza.size = pizzaSize
+    newPizza.toppings = pizzaToppings;
+    newPizza.priceCalc();
+    newPizza.addToppings();
+    $("#pizza-price").text(newPizza.price);
     $("#result").show();
+  })
+  $("#add").click(function() {
+    order.addToOrder(newPizza);
+    console.log(order);
+    displayPizzaDetails(order);
+    $("#result").hide();
   })
 });
  
