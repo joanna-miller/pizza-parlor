@@ -1,3 +1,14 @@
+// Business Logic for Order ---------
+function Order() {
+  this.pizzas = {};
+}
+
+Order.prototype.addToOrder = function(pizza) {
+  this.pizzas[pizza.price] = pizza;
+}
+
+
+
 // Business Logic for Pizza ---------
 
 function Pizza(price, size, toppings) {
@@ -39,6 +50,7 @@ $(document).ready(function() {
     let pizza = new Pizza(0, pizzaSize, pizzaToppings);
     pizza.priceCalc();
     pizza.addToppings();
+    
     $("#pizza-price").text(pizza.price);
   });
 });

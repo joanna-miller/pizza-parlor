@@ -48,6 +48,10 @@ Expect: (pizza.addToppings()).toEqual(pizza {price: 14, size: "small", toppings:
 Test: Calculate pizza cost based on multiple added toppings.
 Expect (pizza.addToppings()).toEqual(pizza {price: 19, size: "small", toppings: [2, 2, 3]})
 
+Describe: Order()
+Test: Store a pizza ordered created by user.
+Expect (let order = new Order{pizzas:{}})
+
 ```
 ---
 
