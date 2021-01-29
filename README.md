@@ -55,6 +55,10 @@ Expect (let order = new Order()).toEqual(order{pizzas:{}})
 Describe: Order.prototype.addToOrder()
 Test: Add pizza to order object.
 Expect: (order.addToOrder(pizza)).toEqual(order{pizzas:{14}})
+
+Describe: Order.prototype.assignId()
+Test: Give pizza object an ID within Order()
+Expect: (order.assignId(pizza).toEqual(pizza{price:, size:, toppings:id:1}))
 ```
 ---
 

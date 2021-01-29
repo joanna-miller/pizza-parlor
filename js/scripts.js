@@ -1,13 +1,18 @@
-/* Business Logic for Order ---------
+// Business Logic for Order ---------
 function Order() {
   this.pizzas = {};
+  this.currentId = 0;
 }
 
 Order.prototype.addToOrder = function(pizza) {
+  pizza.id = this.assignId();
   this.pizzas[pizza.price] = pizza;
-} */
+} 
 
-
+Order.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+}
 
 // Business Logic for Pizza ---------
 
@@ -38,10 +43,14 @@ Pizza.prototype.addToppings = function () {
 }
 
 //User Interface Logic ---------
-//let order = new Order();
+let order = new Order();
+
+/* function displayPizzaDetails(pizzaToDisplay) {
+  let pizzaList = $("ul#cart");
+  let htmlForPizzaInfo = 
+} */
 
 $(document).ready(function() {
-  
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
     const pizzaToppings = [];
@@ -54,6 +63,6 @@ $(document).ready(function() {
     pizza.addToppings();
     $("#pizza-price").text(pizza.price);
     $("#result").show();
-    })
-  });
+  })
+});
  
