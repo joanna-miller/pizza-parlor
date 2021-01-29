@@ -7,7 +7,67 @@
   <script src="js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
-<body>
-  
-</body>
+<div class="container">
+  <body>
+    <form id="pizza-builder">
+      <div id="select-size">
+        <h2>Select your pizza size:</h2>
+        <div class="select-size form-check" required>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="small">
+          <label class="form-check-label" for="flexRadioDefault1">Small <span class="cost">$12</span></label>
+        </div>
+        <div class="select-size form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="medium">
+          <label class="form-check-label" for="flexRadioDefault2">Medium <span class="cost">$15</span></label>
+        </div>
+        <div class="select-size form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="large">
+          <label class="form-check-label" for="flexRadioDefault2">Large <span class="cost">$18</span></label>
+        </div>
+      </div>
+
+      <div id="select-toppings">
+        <h2>Select your pizza toppings:</h2>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">Extra Cheese <span class="cost">+$2</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked">Pepperoni <span class="cost">+$2</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">Sausage <span class="cost">+$2</span></label>
+        </div>
+          <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked">Ham <span class="cost">+$2</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked">Mushroom <span class="cost">+$1</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">Onion <span class="cost">+$1</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+          <label class="form-check-label" for="flexCheckChecked">Black Olive <span class="cost">+$1</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">Green Pepper <span class="cost">+$1</span></label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">Pineapple <span class="cost">+$1</span></label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Calulate Total</button>
+    </form> 
+
+  </body>
+</div>
 </html>
