@@ -31,14 +31,14 @@ Pizza.prototype.addToppings = function () {
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
+    const pizzaToppings = [];
     const pizzaSize = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=topping]:checked").each(function(){
-      const pizzaToppings = parseInt($(this).val());
-      console.log(pizzaToppings);
-    });  
-    
-    console.log(pizzaSize);
-    
-    
+      pizzaToppings.push(parseInt($(this).val()));
+    }); 
+    let pizza = new Pizza(0, pizzaSize, pizzaToppings);
+    pizza.priceCalc();
+    pizza.addToppings();
+    $("#pizza-price").text(pizza.price);
   });
 });
