@@ -53,6 +53,7 @@ $(document).ready(function() {
     pizza.priceCalc();
     pizza.addToppings();
     $("#pizza-price").text(pizza.price);
+    $("#result").show();
     })
   });
  
