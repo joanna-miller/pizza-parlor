@@ -41,13 +41,15 @@ Describe: Pizza.prototype.priceCalc()
 Test: Calculate pizza cost based on size "small".
 Expect: (pizza.priceCalc()).toEqual(pizza {price: 12, size, "small", toppings: []})
 
-Describe: Pizza.prototype.priceCalc()
 Test: Calculate pizza cost based on size "medium".
 Expect: (pizza.priceCalc()).toEqual(pizza {price: 15, size, "medium", toppings: []})
 
-Describe: Pizza.prototype.priceCalc()
 Test: Calculate pizza cost based on size "large".
 Expect: (pizza.priceCalc()).toEqual(pizza {price: 18, size, "large", toppings: []})
+
+Describe: Pizza.prototype.addToppings()
+Test: Calculate pizza cost based on 1 added topping.
+Expect: (pizza.addToppings()).toEqual(pizza {price: 14, size: "small", toppings: [2]})
 
 ```
 ---

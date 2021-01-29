@@ -4,7 +4,7 @@ function Pizza(price, size, toppings) {
   this.toppings = toppings;
 }
 
-let pizza = new Pizza(0, "large", [])
+let pizza = new Pizza(0, "small", [])
 
 Pizza.prototype.priceCalc = function () {
   if (this.size === "small") {
@@ -14,4 +14,12 @@ Pizza.prototype.priceCalc = function () {
   } else if (this.size === "large") {
     this.price = 18;
   }
+}
+
+Pizza.prototype.addToppings = function () {
+  let sum = 0;
+  this.toppings.forEach(function(topping) {
+    sum += topping;
+  });
+  this.price += sum;
 }
