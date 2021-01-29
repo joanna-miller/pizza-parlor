@@ -21,6 +21,14 @@ Order.prototype.findPizza = function(id) {
   return false;
 }
 
+Order.prototype.deletePizza = function(id) {
+  if (this.pizzas[id] === undefined) {
+    return false;
+  }
+  delete this.pizzas[id];
+  return true;
+}
+
 // Business Logic for Pizza ---------
 
 function Pizza(price, size, toppings) {

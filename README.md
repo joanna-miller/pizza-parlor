@@ -64,6 +64,10 @@ Describe: Order.prototype.findPizza()
 Test: Find pizza by id.
 Expect: (order.findPizza(1)).toEqual(order{pizza{price:, size:, toppings:, id: 1}})
 
+Describe: Order.prototype.deletePizza()
+Test: Delete pizza by id.
+Expect: (order.deletePizza(1)).toEqual(true)
+
 ```
 ---
 
