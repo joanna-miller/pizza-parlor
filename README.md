@@ -60,6 +60,10 @@ Describe: Order.prototype.addToOrder()
 Test: Add pizza to order object.
 Expect: (order.addToOrder(pizza)).toEqual(order{pizzas:{14}})
 
+Describe: Order.prototype.findPizza()
+Test: Find pizza by id.
+Expect: (order.findPizza(1)).toEqual(order{pizza{price:, size:, toppings:, id: 1}})
+
 ```
 ---
 

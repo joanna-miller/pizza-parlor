@@ -4,14 +4,21 @@ function Order() {
   this.currentId = 0;
 }
 
-Order.prototype.addToOrder = function(pizza) {
-  pizza.id = this.assignId();
-  this.pizzas[pizza.price] = pizza;
-} 
-
 Order.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
+}
+
+Order.prototype.addToOrder = function(pizza) {
+  pizza.id = this.assignId();
+  this.pizzas[pizza.id] = pizza;
+} 
+
+Order.prototype.findPizza = function(id) {
+  if (this.pizzas[id] != undefined) {
+    return this.pizzas[id];
+  }
+  return false;
 }
 
 // Business Logic for Pizza ---------
@@ -45,10 +52,15 @@ Pizza.prototype.addToppings = function () {
 //User Interface Logic ---------
 let order = new Order();
 
-/* function displayPizzaDetails(pizzaToDisplay) {
+/* function displayPizzaDetails(orderToDisplay) {
   let pizzaList = $("ul#cart");
-  let htmlForPizzaInfo = 
-} */
+  let htmlForPizzaInfo = "";
+  Object.keys(orderToDisplay).forEach(function(key) {
+    const pizza = orderToDisplay.findPizza(key);
+    htmlForPizzaInfo += "<li id=" + pizza.id + ">" + "Pizza #" + pizza.id + ": " + pizza.size + "#" + "toppings - $" + pizza.price + "</li>"
+  });
+  pizzaList.html(htmlForPizzaInfo);
+}; */
 
 $(document).ready(function() {
   $("form#pizza-builder").submit(function(event) {
