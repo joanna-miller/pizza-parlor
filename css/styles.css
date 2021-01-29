@@ -4,11 +4,43 @@
   width: 80%; 
   top: 10%; 
   left: 10%; 
+  right: 10%;
+  min-height: 750px;
   background-color: yellow;
   border-radius: 10%;
-  border: solid blue;
+  border: solid rgb(0, 162, 255);
+  border-width: 6px;
+  margin-bottom: 200px;
 }
 
 body {
   text-align: center;
 }
+
+h2 {
+  padding: 20px;
+}
+
+h3 {
+  padding: 20px;
+}
+
+.cost {
+  font-style: italic;
+}
+
+#select-toppings {
+  column-count: 2;
+}
+
+.btn {
+  margin: 20px;;
+}
+
+#result {
+  border: solid black;
+  width: 80%;
+  text-align: center;
+}
+
+

@@ -8,31 +8,27 @@
   <style>body {background-image: url("img/pizza2.jpg");}</style>
   <title>Pizza Parlor</title>
 </head>
-<div class="container">
-  <body>
+
+<body>
+  <div class="container">
     <h2>Welcome to the Best Pizza Parlor in the World</h2>
     <form id="pizza-builder">
+
       <div id="select-size">
         <h3>Select your pizza size:</h3>
         <div class="radio">
-          <label>
-            <input type="radio" name="size" value="small" checked>Small <span class="cost">$12</span>
-          </label>
+          <input type="radio" name="size" value="small" checked>Small . . . <span class="cost">$12</span>
         </div>
         <div class="radio">
-          <label>
-            <input type="radio" name="size" value="medium">Medium <span class="cost">$15</span>
-          </label>
+          <input type="radio" name="size" value="medium">Medium . . . <span class="cost">$15</span>
         </div>
         <div class="radio">
-          <label>
-            <input type="radio" name="size" value="large">Large <span class="cost">$18</span>
-          </label>
+          <input type="radio" name="size" value="large">Large . . . <span class="cost">$18</span>
         </div>
       </div>
 
-      <div id="select-toppings">
-        <h3>Select your pizza toppings:</h3>
+      <h3>Select your pizza toppings:</h3>
+      <div id="select-toppings">  
         <div class="form-check">
           <input type="checkbox" value="2" name="topping"> Extra Cheese <span class="cost">+$2</span>
         </div>
@@ -44,6 +40,15 @@
         </div>
         <div class="form-check">
           <input type="checkbox" value="2" id="flexCheckChecked" name="topping"> Ham <span class="cost">+$2</span>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" value="2" id="flexCheckChecked" name="topping"> Bacon <span class="cost">+$2</span>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" value="2" id="flexCheckChecked" name="topping"> Chicken <span class="cost">+$2</span>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" value="1" id="flexCheckDefault" name="topping"> Anchovies <span class="cost">+$1</span>
         </div>
         <div class="form-check">
           <input type="checkbox" value="1" id="flexCheckChecked" name="topping"> Mushroom <span class="cost">+$1</span>
@@ -58,16 +63,25 @@
           <input type="checkbox" value="1" id="flexCheckDefault" name="topping"> Green Pepper <span class="cost">+$1</span>
         </div>
         <div class="form-check">
+          <input type="checkbox" value="1" id="flexCheckDefault" name="topping"> Hot Peppers <span class="cost">+$1</span>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" value="1" id="flexCheckDefault" name="topping"> Spinach <span class="cost">+$1</span>
+        </div>
+        <div class="form-check">
           <input type="checkbox" value="1" id="flexCheckDefault" name="topping"> Pineapple <span class="cost">+$1</span>
         </div>
-      </div> 
+        <div class="form-check">
+          <input type="checkbox" value="1" id="flexCheckDefault" name="topping"> Fresh Garlic <span class="cost">+$1</span>
+        </div>
+      </div>   
       <button type="submit" class="btn btn-primary">Calulate Total</button>
-    </form> 
-    <div id="result">
-      <p>Your pizza will cost $<span id="pizza-price"></span></p>
-      <button type="submit" class="btn btn-primary">Add to Order</button>
+    </form>
+
+    <div id="result">        
+      <h3>Your pizza will cost $<span id="pizza-price"></span></h3>
     </div>
     
-  </body>
-</div>
+  </div>
+</body>
 </html>
