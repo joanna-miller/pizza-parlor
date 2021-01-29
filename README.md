@@ -43,7 +43,11 @@ Expect: (pizza.priceCalc()).toEqual(pizza {price: 12, size, "small", toppings: [
 
 Describe: Pizza.prototype.priceCalc()
 Test: Calculate pizza cost based on size "medium".
-Expect: (pizza.priceCalc()).toEqual(pizza {price: 15, size, "mdium", toppings: []})
+Expect: (pizza.priceCalc()).toEqual(pizza {price: 15, size, "medium", toppings: []})
+
+Describe: Pizza.prototype.priceCalc()
+Test: Calculate pizza cost based on size "large".
+Expect: (pizza.priceCalc()).toEqual(pizza {price: 18, size, "large", toppings: []})
 
 ```
 ---
