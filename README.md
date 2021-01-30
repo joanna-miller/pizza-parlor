@@ -24,7 +24,7 @@ _Build a custom pizza from the size and topping choices provided and get the pri
 
 ### OR
 
-[Click Here!](https://joanna-miller.github.io/pizza-parlor/)
+* [Click Here!](https://joanna-miller.github.io/pizza-parlor/)
 
 ---
 
